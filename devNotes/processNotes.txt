@@ -84,6 +84,11 @@ Phase 3: Create a custom component:
 ========================================================================================
 * From here on, you can create as many custom components as you want. The sequence to
   creating custom components is usually the same:
-  1. Create a .js component file.
-  2. Inside,  
+      1. Create a .js component file.
+      2. Inside, create 3 things:
+        #1: Import React
+        #2: Create your custom component.
+        #3: export your component.
+      3. Import you component to the file you wish to use it in.
+      4. Create a component tag!
 ========================================================================================
