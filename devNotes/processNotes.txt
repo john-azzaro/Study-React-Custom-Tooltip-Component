@@ -92,3 +92,16 @@ Phase 3: Create a custom component:
       3. Import you component to the file you wish to use it in.
       4. Create a component tag!
 ========================================================================================
+
+
+
+
+Phase 3: Create Component styling
+=========================================================================================
+* For component styling, create a style sheet with the name of the component (or related
+  components) in the folder you have the component in. In this case, custom components are
+  going to have the .css files inside the composition file. So the sequence of getting 
+  the styling connected to your components goes like this:
+      1. Create a .css file for the component in the same folder as the component file.
+      2. Import the .css file to the folder you use the component in.
+=========================================================================================
