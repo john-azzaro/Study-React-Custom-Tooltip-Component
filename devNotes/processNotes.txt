@@ -1,0 +1,57 @@
+Process Notes for Custom React Tooltip Component
+==================================================
+
+
+
+About Process Notes
+===================
+"Process Notes" is a step-by-step workflow document that outlines the "phases" of my study/app development and the successive steps taken at each
+milestone of the examination. In the case of studies, the process notes might be eschewed in favor of the main Readme document in the repository, 
+mostly because of the advantage in formatting and accessibility. However, I will put additional notes and resource links that might be helpful. In 
+the case of application development, groups of related steps are combined into "phase" modules so that they can be reorganized and refined in 
+post-review. This has proven to be EXTREMELY helpful in learning (i.e. Feynman technique (https://fs.blog/2012/04/feynman-technique/)) and refining 
+workflow so I can improve my process in future projects. It also has come in handy for some tricky bug fixes not only for past projects, but this 
+one as well so I would urge you to consider at least doing a rough summary for your own benefit.
+
+
+
+Starting a React app from scratch
+=================================
+
+Phase 1: In gitbash, run "npx create-react-app react-sandbox".
+  * This creates the react application (may take at least a few minutes).
+  * When this is done installing, remember to cd into it since its in a nested folder.
+
+Phase 2: Run "npm install".
+  * This is going to install all the dependencies form the create-react-app.
+
+Phase 3: Remove excess files from the directory:
+  * In gitbash, there are three files you want to remove:
+    1. rm ./src/serviceWorker.js
+    2. rm ./src/App.css
+    3. rm ./src/logo.svg
+
+Phase 4: Update content to create a minimal starting point for the application:
+  1. In ./src/App.js, replace what is there by default with this code:
+    -------------------------------------------------------------------------
+        import React from 'react';
+
+        function App() {
+          return (
+            <main className='App'>
+              {/* content goes here */}
+            </main>
+          );
+        }
+
+        export default App;
+    -------------------------------------------------------------------------
+  2. In ./src/index.js, replace what is there by defualt with the following code:
+    -------------------------------------------------------------------------
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import App from './App';
+        import './index.css';
+
+        ReactDOM.render(<App />, document.getElementById('root'));  
+    -------------------------------------------------------------------------
