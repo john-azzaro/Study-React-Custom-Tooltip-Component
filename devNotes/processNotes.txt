@@ -17,7 +17,9 @@ one as well so I would urge you to consider at least doing a rough summary for y
 
 Phase 1: Starting a React app from scratch
 ==============================================================================================
-* This is the basic setup for the react application. You dont really nee dot go tot he
+* This is the basic setup for the react application. You dont really need to remove any files
+  unless you want to (i.e. service worker, etc.), but this is just to prime the application for
+  use for basic projects.
 ==============================================================================================
 
 Step 1: In gitbash, run "npx create-react-app react-sandbox".
@@ -61,4 +63,27 @@ Step 4: In ./src/index.js, replace what is there by defualt with the following c
     -------------------------------------------------------------------------
 
 
-  Phase 5: 
+
+
+
+  Phase 2: Setup for custom components:
+  ====================================================================================
+  * With any custom component you make, you will want to store them in a new composition
+    folder inside the src file.
+  ====================================================================================
+
+  Step 1: Create a composition file
+    -------------------------------------------------------------------------
+      src  >  composition
+    -------------------------------------------------------------------------
+
+
+
+
+Phase 3: Create a custom component:
+========================================================================================
+* From here on, you can create as many custom components as you want. The sequence to
+  creating custom components is usually the same:
+  1. Create a .js component file.
+  2. Inside,  
+========================================================================================
