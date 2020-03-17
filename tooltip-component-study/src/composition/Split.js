@@ -1,8 +1,9 @@
 import React from 'react';
+import './Split.css';
 
 function Split(props) {
   const combinedClassName = `style ${props.className}`
-  return(
+  return (
     <div className={combinedClassName}>
       {props.children}
     </div>

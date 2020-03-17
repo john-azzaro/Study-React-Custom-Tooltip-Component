@@ -180,25 +180,31 @@ Tooltip Phase
 
 1. Create a Tooltip.js file:
   --------------------------------------------------------------
-    Tooltip.js
+      Tooltip.js
   --------------------------------------------------------------
 
 2. Add Tooltip logic:
   -------------------------------------------------------------------------
-  import React from 'react';
+      import React from 'react';
+      import './Tooltip.css';                                                // import css file for Tooltip.
 
-  function Tooltip(props) {
-    return (
-      <span className="Tooltip">
-        <span className="Tooltop-content">
-          {props.children}
-        </span>
-        <div className="Tooltip-message">
-          {props.children}
-        </div> 
-      </span>
-    );
-  }
+      function Tooltip(props) {
+        return (
+          <span className="Tooltip">                                           
+            <span className="Tooltop-content">                               // Word that will reveal word on hover.
+              {props.children}
+            </span>
+            <div className="Tooltip-message">                                // message on hover.
+              {props.children}
+            </div> 
+          </span>
+        );
+      }
 
-  export default Tooltip;
+      export default Tooltip;
   -------------------------------------------------------------------------
+
+  3. Import Tooltip.js and Tooltip.css to App.js
+    -------------------------------------------------------------------------
+
+    -------------------------------------------------------------------------

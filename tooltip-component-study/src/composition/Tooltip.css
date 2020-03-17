@@ -7,7 +7,7 @@
   color: #01A800;
 }
 
-.Tooltip-message {                                               
+.Tooltip-message {
   background-color: hsla(0, 0%, 10%, 0.9);
   border-radius: 3px;
   color: #fff;
@@ -22,7 +22,7 @@
   white-space: nowrap;
 }
 
-.Tooltip-message:after {                                 
+.Tooltip-message:after {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid hsla(0, 0%, 20%, 0.9);
@@ -36,13 +36,13 @@
   width: 0;
 }
 
-.Tooltip-message {                            
+.Tooltip-message {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-.Tooltip:hover > .Tooltip-message {        
+.Tooltip:hover > .Tooltip-message {
   opacity: 1;
   visibility: visible;
 }
