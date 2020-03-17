@@ -244,9 +244,9 @@ Tooltip Phase
   4. Customizing Tooltip further:
     * You can customize components further with props and inline-styling.
 
-    To Use INLINE STYLING, you simply need to add the additional attribute to your element.
-    Normally you would want to use className, but in this case, you just add the attribute with
-    double brackets, one for the JSX insertion and the second for the css property. 
+    I. To Use INLINE STYLING, you simply need to add the additional attribute to your element.
+       Normally you would want to use className, but in this case, you just add the attribute with
+      double brackets, one for the JSX insertion and the second for the css property. 
 
     -------------------------------------------------------------------------------------
         function Tooltip(props) {
@@ -262,3 +262,14 @@ Tooltip Phase
           );
         }
     -------------------------------------------------------------------------------------
+
+    II. Then to add the inline styling from above to the component, simply add the "color" attribute to the
+        special variables you created in the primary App component. In this case, we can add the color name or
+        a hexcode (i.e. color='#126BCC')
+        ------------------------------------------------------------------------------------
+            const firstTooltip = (                                                         
+              <Tooltip color='hotpink' message='tooltip message'>                             // added color attribute
+                ipsum 
+              </Tooltip>
+            )
+        ------------------------------------------------------------------------------------

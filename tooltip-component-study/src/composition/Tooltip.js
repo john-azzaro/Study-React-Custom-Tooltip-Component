@@ -3,11 +3,11 @@ import './Tooltip.css';
 
 function Tooltip(props) {
   return (
-    <span className="Tooltip">                                                
-      <span className="Tooltip-content">
+    <span className="Tooltip" >                                                
+      <span className="Tooltip-content" style={{ color: props.color }}>
         {props.children}
       </span>
-      <div className="Tooltip-message">                                      
+      <div className="Tooltip-message" style={{ color: props.color }}>                                      
         {props.message}
       </div>
     </span>
