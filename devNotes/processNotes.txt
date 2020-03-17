@@ -167,3 +167,18 @@ Phase 4: Make your component configurable:
           }
 
         ---------------------------------------------------------------------------------
+
+
+
+
+Tooltip Phase
+==========================================================================================
+* So the above Phases are about project setup and setting up a basic component for use. For
+  the objective of this study, we want to create a tool tip component that will reveal a 
+  tip when the user hovers over it.
+==========================================================================================
+
+1. Create a Tooltip.js file:
+  --------------------------------------------------------------
+    Tooltip.js
+  --------------------------------------------------------------
