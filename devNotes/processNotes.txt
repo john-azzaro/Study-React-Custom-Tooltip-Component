@@ -84,15 +84,14 @@ Phase 3: Create a custom component:
 ========================================================================================
 * From here on, you can create as many custom components as you want. The sequence to
   creating custom components is usually the same:
+========================================================================================
       1. Create a .js component file.
       2. Inside, create 3 things:
         #1: Import React
-        #2: Create your custom component.
+        #2: Create your custom component (remember to capitalize the name if it is a custom component).
         #3: export your component.
       3. Import you component to the file you wish to use it in.
       4. Create a component tag!
-========================================================================================
-
 
 
 
@@ -102,10 +101,9 @@ Phase 3: Create Component styling:
   components) in the folder you have the component in. In this case, custom components are
   going to have the .css files inside the composition file. So the sequence of getting 
   the styling connected to your components goes like this:
+=========================================================================================
       1. Create a .css file for the component in the same folder as the component file.
       2. Import the .css file to the folder you use the component in.
-=========================================================================================
-
 
 
 
@@ -117,3 +115,32 @@ Phase 4: Make your component configurable:
   (i.e. the text) are passed to the component (via the "props" parameter) so that they
   can be used in the specific context.
 =========================================================================================
+  1. In your component, pass "props" as a parameter.
+    * This is going to allow you to access the children inside the components you are using this
+      custom component in.
+    * Use brackets when you access the props object.
+
+    So in App where you are using your custom component, you have text that is considered "children".
+      ---------------------------------------------------------------------------------
+        function App() {
+          return (
+            <Split className="left">                                                   // Split component with child text.
+              This is the child text that will be passed via props.
+            </Split>
+            <Split className="right">
+              This is the child text that will be passed via props.
+            </Split>
+          )
+        }
+      ---------------------------------------------------------------------------------
+
+
+      ---------------------------------------------------------------------------------
+        function Split(props) {                                                     // By passing "props" you access the props object....
+          return (
+            <div className="split">
+              {props.children}                                                       // ... and pass the child text through via props.children.
+            </div>
+          )
+        }
+      ---------------------------------------------------------------------------------
