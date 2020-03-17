@@ -96,7 +96,7 @@ Phase 3: Create a custom component:
 
 
 
-Phase 3: Create Component styling
+Phase 3: Create Component styling:
 =========================================================================================
 * For component styling, create a style sheet with the name of the component (or related
   components) in the folder you have the component in. In this case, custom components are
@@ -104,4 +104,16 @@ Phase 3: Create Component styling
   the styling connected to your components goes like this:
       1. Create a .css file for the component in the same folder as the component file.
       2. Import the .css file to the folder you use the component in.
+=========================================================================================
+
+
+
+
+Phase 4: Make your component configurable:
+=========================================================================================
+* To put configurability in context, here it means that in the App.js file, we want to use 
+  the component but also use the text in App.js as well. We do this by using the props 
+  object. What this means is that when we use the component, the children of that prop 
+  (i.e. the text) are passed to the component (via the "props" parameter) so that they
+  can be used in the specific context.
 =========================================================================================
