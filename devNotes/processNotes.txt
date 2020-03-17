@@ -182,3 +182,23 @@ Tooltip Phase
   --------------------------------------------------------------
     Tooltip.js
   --------------------------------------------------------------
+
+2. Add Tooltip logic:
+  -------------------------------------------------------------------------
+  import React from 'react';
+
+  function Tooltip(props) {
+    return (
+      <span className="Tooltip">
+        <span className="Tooltop-content">
+          {props.children}
+        </span>
+        <div className="Tooltip-message">
+          {props.children}
+        </div> 
+      </span>
+    );
+  }
+
+  export default Tooltip;
+  -------------------------------------------------------------------------

@@ -1,6 +1,8 @@
 import React from 'react';
 import Split from './composition/Split';
+import Tooltip from './composition/Tooltip';
 import './App.css';
+import './composition/Tooltip';
 
 function App() {
   return (
