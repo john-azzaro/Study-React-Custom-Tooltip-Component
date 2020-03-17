@@ -27,11 +27,9 @@ Step 1: In gitbash, run "npx create-react-app react-sandbox".
   * This creates the react application (may take at least a few minutes).
   * When this is done installing, remember to cd into it since its in a nested folder.
 
-
 Step 2: Run "npm install".
 ==========================
   * This is going to install all the dependencies form the create-react-app.
-
 
 Step 3: Update content to create a minimal starting point for the application:
 ==============================================================================
@@ -50,7 +48,6 @@ Step 3: Update content to create a minimal starting point for the application:
         export default App;
     -------------------------------------------------------------------------
 
-
 Step 4: In ./src/index.js, replace what is there by defualt with the following code:
 ====================================================================================
     -------------------------------------------------------------------------
@@ -61,6 +58,7 @@ Step 4: In ./src/index.js, replace what is there by defualt with the following c
 
         ReactDOM.render(<App />, document.getElementById('root'));  
     -------------------------------------------------------------------------
+
 
 
 
@@ -80,6 +78,8 @@ Step 4: In ./src/index.js, replace what is there by defualt with the following c
 
 
 
+
+
 Phase 3: Create a custom component:
 ========================================================================================
 * From here on, you can create as many custom components as you want. The sequence to
@@ -95,6 +95,9 @@ Phase 3: Create a custom component:
 
 
 
+
+
+
 Phase 3: Create Component styling:
 =========================================================================================
 * For component styling, create a style sheet with the name of the component (or related
@@ -104,6 +107,8 @@ Phase 3: Create Component styling:
 =========================================================================================
       1. Create a .css file for the component in the same folder as the component file.
       2. Import the .css file to the folder you use the component in.
+
+
 
 
 
@@ -120,7 +125,7 @@ Phase 4: Make your component configurable:
       custom component in.
     * Use brackets when you access the props object.
 
-    So in App where you are using your custom component, you have text that is considered "children".
+    I. So in App where you are using your custom component, you have text that is considered "children".
       ---------------------------------------------------------------------------------
         function App() {
           return (
@@ -134,7 +139,8 @@ Phase 4: Make your component configurable:
         }
       ---------------------------------------------------------------------------------
 
-
+      II. When you pass props to Split, you are essentially saying that you want to let split
+      have access to the child text that is in the Split component instance already.
       ---------------------------------------------------------------------------------
         function Split(props) {                                                     // By passing "props" you access the props object....
           return (
@@ -144,3 +150,20 @@ Phase 4: Make your component configurable:
           )
         }
       ---------------------------------------------------------------------------------
+
+      III. HOWEVER... you can also make attributes such as classNames configurable as well.
+           To make these attributes configurable, you need to create a variable can apply the
+           stylizations that already exist for your component (i.e. "split") but also the 
+           additional attibutes that exist outside this component (i.e. "left" and "right").
+           To do this, you need to use a template literal and access the props.className prop.
+        ---------------------------------------------------------------------------------
+          function Split(props) {
+            const combinedClassName = `split ${props.className}`;                              // variable that access the className prop.
+            return (
+              <div className={combinedClassName}>                                              // and use it for the className attibute.
+                {props.children}                                                       
+              </div>
+            );
+          }
+
+        ---------------------------------------------------------------------------------

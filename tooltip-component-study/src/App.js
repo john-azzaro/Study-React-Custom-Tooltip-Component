@@ -3,15 +3,15 @@ import Split from './composition/Split';
 import './App.css';
 
 function App() {
-  return(
+  return (
     <main className='App'>
-    <Split>
-      This is the content for the left `Split`. Lorem ipsum etc.
-    </Split>
-    <Split>
-      This is the content for the right `Split`. Inventore a etc.
-    </Split>
-  </main>
+      <Split className="left">                                                    
+        This is the content for the left `Split`. Lorem ipsum...
+      </Split>
+      <Split className="right">
+        This is the content for the right `Split`. Inventore...    
+      </Split>
+    </main>
   );
 }
 
