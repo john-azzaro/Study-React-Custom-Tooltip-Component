@@ -204,14 +204,14 @@ Tooltip Phase
       export default Tooltip;
   -------------------------------------------------------------------------
 
-  3. Import Tooltip.js and Tooltip.css to App.js
+  3. Import Tooltip.js and Tooltip.css to App.js and use inside a component.
     ------------------------------------------------------------------------------------------------------
         import React from 'react';
         import Split from './composition/Split';
         import Tooltip from './composition/Tooltip';
         import './App.css';
 
-        const firstTooltip = (                                                                                // Tooltip variable 
+        const firstTooltip = (                                                                                // Tooltip variable "firstTooltip"
           <Tooltip message='tooltip message'>
           ipsum
           </Tooltip>
@@ -225,8 +225,8 @@ Tooltip Phase
         function App() {
           return (
             <main className='App'>
-              <Split className='left' flexBasis='2'>
-                This is the content for the left Split. Lorem {firstTooltip} dolor sit
+              <Split className='left' flexBasis='2'> 
+                This is the content for the left Split. Lorem {firstTooltip} dolor sit                       // "firstTooltip" used inside component.
                 amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia?<br />
               </Split>
               <Split className='right'>
@@ -239,3 +239,26 @@ Tooltip Phase
 
         export default App;
     ----------------------------------------------------------------------------------------------------------
+
+
+  4. Customizing Tooltip further:
+    * You can customize components further with props and inline-styling.
+
+    To Use INLINE STYLING, you simply need to add the additional attribute to your element.
+    Normally you would want to use className, but in this case, you just add the attribute with
+    double brackets, one for the JSX insertion and the second for the css property. 
+
+    -------------------------------------------------------------------------------------
+        function Tooltip(props) {
+          return (
+            <span className="Tooltip">                                                
+              <span className="Tooltip-content" style={{ color: props.color }}>              // added in-line style property
+                {props.children}
+              </span>
+              <div className="Tooltip-message">                                      
+                {props.message}
+              </div>
+            </span>
+          );
+        }
+    -------------------------------------------------------------------------------------
