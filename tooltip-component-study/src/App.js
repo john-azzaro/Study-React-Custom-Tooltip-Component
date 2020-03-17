@@ -5,7 +5,7 @@ import './App.css';
 
 const firstTooltip = (                                                         
   <Tooltip message='tooltip message'>
-  ipsum
+    ipsum 
   </Tooltip>
 )
 const secondTooltip = (                                                    
@@ -20,9 +20,6 @@ function App() {
       <Split className='left' flexBasis='2'>
         This is the content for the left Split. Lorem {firstTooltip} dolor sit amet consectetur, adipisicing elit.      
         Incidunt ex velit suscipit facere officia?<br />
-        <Tooltip message='one more tooltip message'>                                                                   
-          Necessitatibus?
-        </Tooltip>
       </Split>
       <Split className='right'>
         This is the content for the right Split. Inventore aliquid cupiditate suscipit repellat. 

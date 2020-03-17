@@ -8,7 +8,7 @@ function Tooltip(props) {
         {props.children}
       </span>
       <div className="Tooltip-message">                                      
-        {props.children}
+        {props.message}
       </div>
     </span>
   );
