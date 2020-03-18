@@ -4,7 +4,7 @@ import './Tooltip.css';
 function Tooltip(props) {
   return (
     <span className="Tooltip" >                                                
-      <span className="Tooltip-content" style={{ color: props.color }}>
+      <span className="Tooltip-content">
         {props.children}
       </span>
       <div className="Tooltip-message" style={{ color: props.color }}>                                      

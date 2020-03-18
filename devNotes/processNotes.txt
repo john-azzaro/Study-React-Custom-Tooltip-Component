@@ -240,7 +240,9 @@ Tooltip Phase
         export default App;
     ----------------------------------------------------------------------------------------------------------
 
-
+===============================
+HOW DO YOU USE INLINE STYLING
+==============================
   4. Customizing Tooltip further:
     * You can customize components further with props and inline-styling.
 
@@ -273,3 +275,14 @@ Tooltip Phase
               </Tooltip>
             )
         ------------------------------------------------------------------------------------
+
+=============================
+How do you use default props
+================================
+What are React Class Components
+================================
+
+On Class components:
+  * Classes are a standard ES6 feature so that you can make React components with extra features.
+  * Inner working aside, the syntax for creating classes is useful to know at this point.
+  * 
