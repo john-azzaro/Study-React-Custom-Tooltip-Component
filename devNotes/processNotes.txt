@@ -400,9 +400,16 @@ What are default props?
    ---------------------------------------------------------------------------------------------
 
 
-
 4. Make sure you have the right exportation for the component.
   -------------------------------------------------------------------------------------------
       export default TooltipClass;
   -------------------------------------------------------------------------------------------
 
+
+
+
+
+=============================
+What is composition?
+=============================
+* Components are like branches on a tree where each branch contains zero or more branches branching off from it.
