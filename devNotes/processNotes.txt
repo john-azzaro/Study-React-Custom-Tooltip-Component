@@ -320,15 +320,15 @@ How to create a class component
   ------------------------------------------------------------------------------------------------
     class TooltipClass extends React.Component {
       render() {
-        return <span>{this.props.children}</span>
+        return <span>{this.props.children}</span>                                                    // use this.props.children.
       }
     } 
   ------------------------------------------------------------------------------------------------
   Compare that to a function component:
   -------------------------------------------------------------------------------------------------
-    function FunctionComponent(props) {
+    function FunctionComponent(props) {                                                             // pass props parameter.
       return (
-        <span>{props.children}</span>
+        <span>{props.children}</span>                                                                // use props.children.
       );
     }
   -------------------------------------------------------------------------------------------------
