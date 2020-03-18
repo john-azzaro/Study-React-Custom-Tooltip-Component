@@ -15,6 +15,9 @@ function Tooltip(props) {
 }
 
 class TooltipClass extends React.Component {
+  static defaultProps = {
+    color: 'red', // green
+  };
   render() {
     console.log('Using a class component!')
     console.log(this.props)

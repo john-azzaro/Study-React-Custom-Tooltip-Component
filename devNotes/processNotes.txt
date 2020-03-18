@@ -370,8 +370,39 @@ How to create a class component
 
     -------------------------------------------------------------------------------------------
 
+===========================
+What are default props?
+===========================
+3. Add a default prop before render with the property "static defaultProps" and assign an object to that property.
+   The keys of that object are the props you want to have defaults for and the values are the default values you want to assign.
+   The defaultProp is used if no equivalent default value is supplied.
+   ---------------------------------------------------------------------------------------------
+        class TooltipClass extends React.Component {
+          static defaultProps = {                                                                  // default prop added.
+            color: 'red', // green
+          };
+          render() {
+            console.log('Using a class component!')
+            console.log(this.props)
+            return (
+              <span className='Tooltip'>
+                <span className='Tooltip-content'>
+                  {this.props.children}
+                </span>
+                <div className='Tooltip-message' style={{ color: this.props.color }}>
+                  {this.props.message}
+                </div>
+              </span>
+            )
+          }
+        }
 
-3. Make sure you have the right exportation for the component.
+   ---------------------------------------------------------------------------------------------
+
+
+
+4. Make sure you have the right exportation for the component.
   -------------------------------------------------------------------------------------------
       export default TooltipClass;
   -------------------------------------------------------------------------------------------
+
