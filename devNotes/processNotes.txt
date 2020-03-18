@@ -310,4 +310,25 @@ How to create a class component
     export default Tooltip;
   ----------------------------------------------------------------------------------------------
 
-2. 
+2. "Render"
+  * Classes are similar to object as they contain methods. 
+  * React class components need a method called "render" (and this is the ONLY method required for React class components).
+  * The render method is similar to function components.
+  * You "return" JSX to define what the component will look like.
+  * The difference between "render()" and "function Component()" is how props work. In a function component, props are
+    a parameter, but in class, props are NOT parameters anymore but accessed through this.props.
+  ------------------------------------------------------------------------------------------------
+    class TooltipClass extends React.Component {
+      render() {
+        return <span>{this.props.children}</span>
+      }
+    } 
+  ------------------------------------------------------------------------------------------------
+  Compare that to a function component:
+  -------------------------------------------------------------------------------------------------
+    function FunctionComponent(props) {
+      return (
+        <span>{props.children}</span>
+      );
+    }
+  -------------------------------------------------------------------------------------------------
