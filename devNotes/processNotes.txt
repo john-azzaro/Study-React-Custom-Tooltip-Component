@@ -317,6 +317,19 @@ How to create a class component
   * You "return" JSX to define what the component will look like.
   * The difference between "render()" and "function Component()" is how props work. In a function component, props are
     a parameter, but in class, props are NOT parameters anymore but accessed through this.props.
+
+  Compare a function component to a class component:
+
+  A function component looks like this:
+  -------------------------------------------------------------------------------------------------
+    function FunctionComponent(props) {                                                             // pass props parameter.
+      return (
+        <span>{props.children}</span>                                                                // use props.children.
+      );
+    }
+  -------------------------------------------------------------------------------------------------  
+  
+  A class component looks like this:
   ------------------------------------------------------------------------------------------------
     class TooltipClass extends React.Component {
       render() {
@@ -324,11 +337,3 @@ How to create a class component
       }
     } 
   ------------------------------------------------------------------------------------------------
-  Compare that to a function component:
-  -------------------------------------------------------------------------------------------------
-    function FunctionComponent(props) {                                                             // pass props parameter.
-      return (
-        <span>{props.children}</span>                                                                // use props.children.
-      );
-    }
-  -------------------------------------------------------------------------------------------------
