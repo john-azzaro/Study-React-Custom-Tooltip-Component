@@ -310,7 +310,7 @@ How to create a class component
     export default Tooltip;
   ----------------------------------------------------------------------------------------------
 
-2. "Render"
+2. "Render" is the same as a functional component 
   * Classes are similar to object as they contain methods. 
   * React class components need a method called "render" (and this is the ONLY method required for React class components).
   * The render method is similar to function components.
@@ -337,3 +337,35 @@ How to create a class component
       }
     } 
   ------------------------------------------------------------------------------------------------
+
+  This is a comparison of the class components and the functional components:
+    -------------------------------------------------------------------------------------------
+        function Tooltip(props) {                                                              // props passed to the function component.
+          return (
+            <span className="Tooltip" >                                                
+              <span className="Tooltip-content">
+                {props.children}                                                               //... and accessed via the props object.
+              </span>
+              <div className="Tooltip-message" style={{ color: props.color }}>                                      
+                {props.message}
+              </div>
+            </span>
+          );
+        }
+
+        class TooltipClass extends React.Component {                                            // class component...
+          render() {                                                                            // ... that renders the JSX (i.e. "return")
+            return (
+              <span className='Tooltip'>
+                <span className='Tooltip-content'>
+                  {this.props.children}                                                         // props are accessed via this.props.children
+                </span>
+                <div className='Tooltip-message' style={{ color: this.props.color }}>
+                  {this.props.message}
+                </div>
+              </span>
+            )
+          }
+        }
+
+    -------------------------------------------------------------------------------------------

@@ -20,13 +20,10 @@ class TooltipClass extends React.Component {
     console.log(this.props)
     return (
       <span className='Tooltip'>
-        <span
-          className='Tooltip-content'
-          style={{ color: this.props.color }}
-        >
+        <span className='Tooltip-content'>
           {this.props.children}
         </span>
-        <div className='Tooltip-message'>
+        <div className='Tooltip-message' style={{ color: this.props.color }}>
           {this.props.message}
         </div>
       </span>
