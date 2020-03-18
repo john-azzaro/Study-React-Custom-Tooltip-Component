@@ -282,7 +282,32 @@ How do you use default props
 What are React Class Components
 ================================
 
-On Class components:
+On Class components (to use defaultProps):
   * Classes are a standard ES6 feature so that you can make React components with extra features.
-  * Inner working aside, the syntax for creating classes is useful to know at this point.
-  * 
+  * Inner workings aside, the syntax for creating classes is useful to know at this point.
+  
+===============================
+How to create a class component
+================================
+1. Add a class between the exisitng component function and the export default line:
+  * In the case of the Tooltip component, we want to create a TooltipClass.
+  ----------------------------------------------------------------------------------------------
+    function Tooltip(props) {
+      return (
+        <span className="Tooltip" >                                                
+          <span className="Tooltip-content">
+            {props.children}
+          </span>
+          <div className="Tooltip-message" style={{ color: props.color }}>                                      
+            {props.message}
+          </div>
+        </span>
+      );
+    }
+
+    class TooltipClass extends React.Component {}                                                      // TooltipClass class component.
+
+    export default Tooltip;
+  ----------------------------------------------------------------------------------------------
+
+2. 
