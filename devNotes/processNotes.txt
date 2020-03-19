@@ -412,6 +412,40 @@ What are default props?
 =============================
 What is composition?
 =============================
+* Composition is the approach of arranging components within or next to each other.
+* Using composition, multiple components can be combined into one new component.
 * Components are like branches on a tree where each branch contains zero or more branches branching off from it, so one component can have
   0 or more components branching from it.
-* The component branches 
+* The component branches be considered "sub-trees" which would be a new component with its own internal tree of branches.
+
+For example, suppose you had the App component.
+  * div, h1, p, and CustomComponent are the "branches" that makup a tree called "App".
+  ------------------------------------------------------------
+    function App() {
+      return (
+        <div>
+          <h1 />
+          <p />
+          <CustomComponent />
+        </div>
+      )
+    }
+  ------------------------------------------------------------
+The tree would look like this:
+  ------------------------------------------------------------
+         h1      p    CustomComponent     
+          |______|______|
+                 |
+                div
+                 |
+                App
+  ------------------------------------------------------------
+And CustomComponent would have its own tree.
+  -----------------------------------------------------------
+        li             li
+         |_____________|
+                |
+                ul
+                |
+          CustomComponent
+  -----------------------------------------------------------
