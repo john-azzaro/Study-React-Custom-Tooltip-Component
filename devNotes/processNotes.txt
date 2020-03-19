@@ -424,9 +424,15 @@ Why do we need composition?
   * But the main reason for composition is to that by composition components, you can manage your app via smaller reusable pieces... which
     you can then use and reuse as a child of many other components.
 
-Qhat are Component relationships?
+What are Component relationships?
   * When components render other components, you create a relationship between components.
-  * The rendering component is called the "parent"
+  * The rendering component is called the "parent".
+  * The component rendered inside the component is called the "child".
+  * Components next to the component are called "siblings".
+  * Remember in this case that a child component here is different than the children prop. Props are actual valuesin the code while the 
+    parent-child relationship is an informal way of describing the relationship.
+  * 
+
 
 For example, suppose you had the App component.
   * div, h1, p, and CustomComponent are the "branches" that makup a tree called "App".
