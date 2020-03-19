@@ -276,8 +276,8 @@ HOW DO YOU USE INLINE STYLING
             )
         ------------------------------------------------------------------------------------
 
-=============================
-How do you use default props
+
+
 ================================
 What are React Class Components
 ================================
@@ -355,7 +355,7 @@ How to create a class component
 
         class TooltipClass extends React.Component {                                            // class component...
           render() {                                                                            // ... that renders the JSX (i.e. "return")
-            return (
+            return (                                                                            // ... and then returns the JSX
               <span className='Tooltip'>
                 <span className='Tooltip-content'>
                   {this.props.children}                                                         // props are accessed via this.props.children
@@ -412,4 +412,6 @@ What are default props?
 =============================
 What is composition?
 =============================
-* Components are like branches on a tree where each branch contains zero or more branches branching off from it.
+* Components are like branches on a tree where each branch contains zero or more branches branching off from it, so one component can have
+  0 or more components branching from it.
+* The component branches 
