@@ -542,5 +542,17 @@ What are component lists?
       }
     ----------------------------------------------------------
   
-  
+    You can make an array of elements like so:
+    -----------------------------------------------------------------
+      const arrayOfItems = apiResponse.items.map(function(item) {         // variable that takes the apiResponse, looks at the items property (whose value is an array) and maps for each item...
+        <li key="item.id">                                                // ... for each item.id (i.e. abc123, etc.)...
+          {item.name}                                                     // ... show the item name.
+        </li>
+      });
+      return (                                                           // and return as JSX...
+        <ul>                                                             // ... inside a ul...
+          {arrayOfItems}                                                 // ... the item name.
+        </ul<
+      )
+    -----------------------------------------------------------------
   
