@@ -496,6 +496,7 @@ What are component lists?
   ==============================
   You can render arrays in JSX
   ==============================
+  USE CURLEY BRACES
   First, it is important to note that we can render arrays with JSX by wrapping the array in
   curly braces. This makes the the items inside the array JSX elements themselves.
       --------------------------------
@@ -510,6 +511,22 @@ What are component lists?
         );
       --------------------------------
 
+  USE KEY PROP TO TRACK ITEMS IN AN ARRAY
+  Second, to track items in an array you need to use the "key" prop for each item in the array.
+  You can also use id attributes or simple numbers for keys.
+      --------------------------------
+        const someJsx = (
+          <ul>
+            {[                              
+              <li key="first" />;          // key props
+              <li key="second" />;
+              <li key={ 3 } />;            // simple number
+            ]}
+          </ul>
+        );
+      --------------------------------
+
+  However, 
   
 
   
