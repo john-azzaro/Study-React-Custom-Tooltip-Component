@@ -431,7 +431,7 @@ What are Component relationships?
   * Components next to the component are called "siblings".
   * Remember in this case that a child component here is different than the children prop. Props are actual valuesin the code while the 
     parent-child relationship is an informal way of describing the relationship.
-  * 
+  * Parent components can have multiple child components and child components can be parent components themselves.
 
 
 For example, suppose you had the App component.
