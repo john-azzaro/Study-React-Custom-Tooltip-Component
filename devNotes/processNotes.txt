@@ -526,7 +526,21 @@ What are component lists?
         );
       --------------------------------
 
-  However, 
-  
+  GENERATE ELEMENTS FROM AN ARRAY
+  However, code is not often done like it is above but instead we would take an array from an API repsonse
+  and generate elements from that array.
 
+  For example, suppose you received this response from a server:
+    ----------------------------------------------------------
+      {
+        "items": [
+          { "id": "abc123", "name": "Foo" },
+          { "id": "def456", "name": "Bar" },
+          { "id": "ghi789", "name": "Herp" },
+          { "id": "jkl012", "name": "Derp" }
+        ]
+      }
+    ----------------------------------------------------------
+  
+  
   
